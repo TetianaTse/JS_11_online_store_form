@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+  
+  <div class="container">
+    <div class="categories"></div>
+    <div class="products"></div>
+    <div class="details"></div>
+  </div>
+  <div class="form">
+    <form name="order_form" class="order_form">
+      <p><label for="surname">Enter your full name:</label></p>
+        <input type="text" id="surname" name="surname" placeholder="Your surname" class="field"/>
+        <input type="text" name="name" placeholder="Your first name" class="field"/>
+        <input type="text" name="patronymic" placeholder="Your patronymic" class="field"/>
+      <p><label for="city">Select delivery city:</label></p>
+        <p><select name="city" id="city" class="select field">
+            <option value="0">--select city--</option>
+            <option value="1">Chernihiv</option>
+            <option value="2">Dnipro</option>
+            <option value="3">Ivano-Frankivsk</option>
+            <option value="4">Kharkiv</option>
+            <option value="5">Kherson</option>
+            <option value="6">Kyiv</option>
+            <option value="7">Lviv</option>
+            <option value="8">Mykolayiv</option>
+            <option value="9">Odesa</option>
+            <option value="10">Poltava</option>
+            <option value="11">Sumy</option>
+            <option value="11">Uzhhorod</option>
+        </select>
+      </p>
+      <label for="department">Enter the department of Nova Poshta:</label>
+        <p><input type="number" id="department" name="department" placeholder="Branch №" class="number field"/>
+        <span class="message_number">Please enter a value greater than 0</span></p>
+
+        <p>Choose a payment method:</p>
+        <input type="radio" name="payment" value="cash" id="cash" checked/>
+        <label for="cash">Cash on delivery</label>
+        <input type="radio" name="payment" value="card" id="card"/>
+        <label for="card">Payment by bank card</label>
+
+      <p><label for="amount">Enter the quantity of the purchased product:</label></p>
+        <p><input type="number" name="amount" id="amount" class="number field"/>
+        <span class="message_number">Please enter a value greater than 0</span></p>
+      <label for="comment">Comment on the order:</label>
+        <p><textarea name="comment" placeholder="Your comment" id="comment"></textarea></p>
+
+      <p><button type="button" id="btn-form">Send</button></p>
+      <p class="message">Fill in required fields!</p>
+    </form>
+  </div>
+  <div class="result"></div>
+  
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
